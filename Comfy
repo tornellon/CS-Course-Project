@@ -1,0 +1,16 @@
+import statistics
+ 
+s = input("Enter a range of temperatures from 68*F to 80*F: ")
+
+sample = [float(i) for i in s.split()]
+
+mean = statistics.mean(sample)
+ 
+stdv= (statistics.stdev(sample, xbar = mean))
+
+if stdv <= 1:
+    print(sample, "\t" "Comfy")
+else:
+      if stdv >=1:
+          print(sample, "\t" "Not Comfy")
+ 
